@@ -72,6 +72,7 @@ router.get('/person/:pn/:ps', function(req, res) {
 
     find(Person, parseInt(req.params.pn), parseInt(req.params.ps))
         .then((persons) => {
+            console.log(persons);
             res.send(persons);
         })
         .catch((err) => {
